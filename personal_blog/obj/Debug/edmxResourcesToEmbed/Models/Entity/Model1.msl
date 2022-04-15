@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbCvModelStoreContainer" CdmEntityContainer="DbCvEntities">
+    <EntitySetMapping Name="TblAbility">
+      <EntityTypeMapping TypeName="DbCvModel.TblAbility">
+        <MappingFragment StoreEntitySet="TblAbility">
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ability" ColumnName="ability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAbout">
+      <EntityTypeMapping TypeName="DbCvModel.TblAbout">
+        <MappingFragment StoreEntitySet="TblAbout">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="explain" ColumnName="explain" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAdmin">
+      <EntityTypeMapping TypeName="DbCvModel.TblAdmin">
+        <MappingFragment StoreEntitySet="TblAdmin">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblComminucation">
+      <EntityTypeMapping TypeName="DbCvModel.TblComminucation">
+        <MappingFragment StoreEntitySet="TblComminucation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblEducation">
+      <EntityTypeMapping TypeName="DbCvModel.TblEducation">
+        <MappingFragment StoreEntitySet="TblEducation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="subtitle" ColumnName="subtitle" />
+          <ScalarProperty Name="subtitle2" ColumnName="subtitle2" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblExperience">
+      <EntityTypeMapping TypeName="DbCvModel.TblExperience">
+        <MappingFragment StoreEntitySet="TblExperience">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="subtitle" ColumnName="subtitle" />
+          <ScalarProperty Name="explain" ColumnName="explain" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblSocialMedya">
+      <EntityTypeMapping TypeName="DbCvModel.TblSocialMedya">
+        <MappingFragment StoreEntitySet="TblSocialMedya">
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

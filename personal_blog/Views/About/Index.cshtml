@@ -1,0 +1,33 @@
+﻿@using personal_blog.Models.Entity
+@model List<TblAbout>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+
+<h2>Hakkımda Düzenleme Sayfası</h2>
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Ad</label>
+        <input type="text" name="name" value="@item.name" class="form-control" /><br />
+        <label>Soyad</label>
+        <input type="text" name="surname" value="@item.surname" class="form-control" /><br />
+        <label>Adres</label>
+        <input type="text" name="adress" value="@item.adress" class="form-control" /><br />
+        <label>Telefon</label>
+        <input type="text" name="telephone" value="@item.telephone" class="form-control" /><br />
+        <label>Mail</label>
+        <input type="text" name="mail" value="@item.mail" class="form-control" /><br />
+        <label>Resim</label>
+        <input type="text" name="image" value="@item.image" class="form-control" /><br />
+        <textarea name="explain"  class="form-control" rows="5"> @item.explain</textarea><br />
+
+        <button class="btn btn-info">Güncelle</button><br />
+        <br />
+
+    }
+
+</form>
+
+

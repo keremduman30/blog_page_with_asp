@@ -1,0 +1,33 @@
+﻿@using personal_blog.Models.Entity
+@model List<TblExperience>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+<br />
+<h2>Deneyim Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Tarih</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id</td>
+        <td>@item.title</td>
+        <td>@item.subtitle</td>
+        <td>@item.date</td>
+        <th><a href="/Experience/deleteExperience/@item.Id" class="btn btn-danger">Sil</a></th>
+        <th><a href="/Experience/getExperience/@item.Id" class="btn btn-outline-success">Düzenle</a></th>
+
+    </tr>
+
+    }
+</table>
+<br />
+<a href="/Experience/addExperience/" class="btn badge-success">Yeni Deneyim Ekle</a>
+

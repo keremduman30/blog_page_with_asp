@@ -1,0 +1,19 @@
+﻿ @model personal_blog.Models.Entity.TblAbility
+@{
+    ViewBag.Title = "AddAbility";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+
+<h2>Yeni Yetenek Ekle</h2>
+<br />
+<form method="post">
+   
+    @Html.Label("Yetenek")
+    @Html.TextBoxFor(x => x.ability, new { @class = "form-control" })<br />
+    @Html.Label("Derece")
+    @Html.TextBoxFor(x => x.rate, new { @class = "form-control" })<br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
+

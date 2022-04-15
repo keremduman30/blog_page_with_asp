@@ -1,0 +1,63 @@
+﻿@using personal_blog.Models.Entity;
+@model List<TblComminucation>
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+    }
+    <br />
+
+    <body class="hold-transition sidebar-mini">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-pane" id="timeline">
+                                    <!-- The timeline -->
+                                    <div class="timeline timeline-inverse">
+                                        @foreach (var item in Model)
+                                        {
+                                            <div class="time-label">
+                                                <span class="bg-info">
+                                                    @if (@item.date.ToString() != "")
+                                                    {
+                                                        @(((DateTime)item.date).ToString("dd-MM-yyyy"))
+
+                                                    }
+
+                                                </span>
+                                            </div>
+
+
+                                            <div>
+                                                <i class="fas fa-comments bg-warning"></i>
+                                                <div class="timeline-item">
+                                                    <span class="time"><i class="far fa-clock"></i> @item.mail</span>
+                                                    <h3 class="timeline-header"><a href="#">@item.name</a>@item.topic</h3>
+                                                    <div class="timeline-body">
+                                                        @item.message
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        }
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+        </body>
+
+            

@@ -1,0 +1,21 @@
+﻿@model personal_blog.Models.Entity.TblSocialMedya
+
+
+
+@{
+    ViewBag.Title = "updateSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+
+<h2>updateSocialMedia</h2>
+<form method="post">
+    @Html.Label("Sosyal Medya Adı")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })<br />
+    @Html.Label("Link")
+    @Html.TextBoxFor(x => x.Link, new { @class = "form-control" })<br />
+    @Html.Label("Icon")
+    @Html.TextBoxFor(x => x.icon, new { @class = "form-control" })<br />
+    <button class="btn btn-success">Guncelle</button>
+
+</form>
+

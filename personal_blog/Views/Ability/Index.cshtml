@@ -1,0 +1,119 @@
+﻿@using personal_blog.Models.Entity
+@model List<TblAbility>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+@{string renk="";}
+@{string renkOran="";}
+
+<h2>Yeteneklerim</h2>
+<!DOCTYPE html>
+<html>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+            
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Yetenek Listem</h3>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <a href="/Ability/AddAbility/" class="btn btn-info">Yeni Yetenek Ekle</a><br />
+                                    <table class="table table-bordered"><br />
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10px">#</th>
+                                                <th>Yetenek</th>
+                                                <th>Derece</th>
+                                                <th style="width: 40px">Oran</th>
+                                                <th>Duzenle</th>
+                                                <th>Sil</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                if (item.rate>=0 && item.rate<=50)
+                                                {
+                                                    renk = "progress-bar bg-danger";
+                                                    renkOran = "badge bg-danger";
+
+                                                }
+                                                else if (item.rate>=51 && item.rate<=70 )
+                                                {
+                                                    renk = "progress-bar bg-warning";
+                                                    renkOran = "badge bg-warning";
+                                                }
+                                                else if (item.rate>=71 && item.rate<=84 )
+                                                {
+                                                    renk = "progress-bar bg-primary";
+                                                    renkOran = "badge bg-primary";
+
+                                                }
+                                                else if (item.rate>=85 && item.rate<=100 )
+                                                {
+                                                    renk = "progress-bar bg-success";
+                                                    renkOran = "badge bg-success";
+
+                                                }
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.ability</td>
+                                                <td>
+                                                    <div class="progress progress-xs">
+                                                        <div class="@renk" style="width: @item.rate%"></div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="@renkOran">@item.rate%</span></td>
+                                                <td>
+                                                    <a class="btn btn-info btn-sm" href="/Ability/updateAbility/@item.Id/">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Düzenle
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger btn-sm" href="/Ability/deleteAbility/@item.Id/">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Sil 
+                                                    </a>
+                                                </td>
+                                              
+
+                                            </tr>
+
+                                            }
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                                
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                    <!-- /.row -->
+                    <!-- /.row -->
+                    
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+    
+</body>
+</html>
+
+

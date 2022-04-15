@@ -1,0 +1,19 @@
+﻿@model personal_blog.Models.Entity.TblAbility
+@{
+    ViewBag.Title = "updateAbility";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+
+
+<h2>Yetenek Guncelleme Sayfası</h2>
+<br />
+<form method="post">
+    @Html.Label("Yetenek")
+    @Html.TextBoxFor(x => x.ability, new { @class = "form-control" })<br />
+    @Html.Label("Baslık")
+    @Html.TextBoxFor(x => x.rate, new { @class = "form-control" })<br />
+    <button class="btn btn-success">Guncelle</button>
+
+</form>
+
+

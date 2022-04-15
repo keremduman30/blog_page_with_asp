@@ -1,0 +1,22 @@
+﻿@model personal_blog.Models.Entity.TblEducation
+@{
+    ViewBag.Title = "addEducation";
+    Layout = "~/Views/Shared/_AdminLayouth.cshtml";
+}
+
+<h2>Eğitim Ekle</h2>
+<form method="post">
+
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.title,"",new { @style="color:red" })<br />
+    @Html.Label("Alt Baslık")
+    @Html.TextBoxFor(x => x.subtitle, new { @class = "form-control" })<br />
+    @Html.Label("Alt Baslık2")
+    @Html.TextBoxFor(x => x.subtitle2, new { @class = "form-control" })<br />
+
+    <button class="btn btn-info">Kaydet</button>
+
+</form>
+
+
