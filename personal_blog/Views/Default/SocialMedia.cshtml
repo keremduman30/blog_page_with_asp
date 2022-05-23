@@ -1,10 +1,14 @@
 ﻿@using personal_blog.Models.Entity
 @model List<TblSocialMedya>
+
 <div class="social-icons">
+
     @foreach (var item in Model)
     {
-    <a class="social-icon" href="#"><i class="@item.icon"></i></a>
+       
+        <a class="social-icon" href="@item.Link"><i class="@item.icon"></i></a>
+       
 
     }
-   
+
 </div>

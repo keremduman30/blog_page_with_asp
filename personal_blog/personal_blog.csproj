@@ -2029,6 +2029,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\profil.jpg" />
     <Content Include="login-form-20\css\bootstrap.min.css" />
     <Content Include="login-form-20\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="login-form-20\css\bootstrap\mixins\_reset-text.css" />
@@ -2430,7 +2431,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="startbootstrap-resume-gh-pages\assets\img\favicon.ico" />
-    <Content Include="startbootstrap-resume-gh-pages\assets\img\profile.jpg" />
+    <Content Include="startbootstrap-resume-gh-pages\assets\img\profil.jpg" />
     <Content Include="startbootstrap-resume-gh-pages\css\styles.css" />
     <Content Include="startbootstrap-resume-gh-pages\index.html" />
     <Content Include="startbootstrap-resume-gh-pages\js\scripts.js" />
